@@ -1,7 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import headerDTP from "../assets/images/header-c.jpg";
-import vonageLogo from "../assets/images/Vonage_logo.svg";
+import Header from "../components/Header.astro"
 import CMForm from "../components/form.astro"
 import { Image } from "astro:assets";
 import speaker1 from "../assets/images/Speaker_DavidBenjamin.jpg";
@@ -16,73 +15,7 @@ import venue6 from "../assets/images/OPCJ-The-Batavia-Pour.webp";
 
 <Layout>
     <div class="flex flex-col gap-10 md:gap-20">
-        <header class="relative w-full h-125 sm:h-137.5 md:h-150 xl:h-162.5">
-            <Image
-                src={headerDTP}
-                alt="Header background"
-                layout="full-width"
-                class="absolute inset-0 w-full h-full object-cover"
-                decoding="async"
-                loading="eager"
-            />
-            <div
-                class="absolute inset-0 bg-linear-to-b from-black/80 from-30% to-transparent to-100%"
-            >
-            </div>
-            <div class="relative z-2 w-full max-w-5xl mx-auto px-5 py-5 h-full">
-                <div class="flex items-center gap-2 sm:gap-8">
-                    <div class="flex flex-col cursor-default">
-                        <span
-                            class="font-sans text-[8px] sm:text-[10px] font-normal text-white uppercase tracking-widest"
-                            >organiser</span
-                        >
-                        <Image
-                            src={vonageLogo}
-                            alt="Vonage logo"
-                            width="140"
-                            height="46"
-                            layout="constrained"
-                            decoding="async"
-                            loading="eager"
-                            class="w-35 md:w-45 h-auto transition-transform duration-300 hover:scale-105"
-                        />
-                    </div>
-                </div>
-
-                <div
-                    class="relative z-10 h-[calc(100%-56px)] sm:h-[calc(100%-88px)] flex flex-col justify-center"
-                >
-                    <div>
-                        <span class=" font-sans text-white text-lg md:text-3xl lg:text-3xl font-normal tracking-tight leading-0">The Future of Messaging in APAC:</span>
-                        <h1 class="w-fit max-w-full sm:max-w-[70%] md:max-w-[80%] leading-none tracking-tighter mt-2 md:mt-4">
-                            How RCS Will Transform Brand Engagement
-                        </h1>
-                    </div>
-                    <div
-                        class="font-sans text-[clamp(16px,13.84px+0.602vw,20px)] text-white font-normal"
-                    >
-                        <div class="py-8">
-                            <span>July 23, 2026</span>
-                            <br />
-                            <a
-                                href="https://share.google/IEzdmPoZRv4g57Re6"
-                                target="_blank"
-                                class="border-b border-white hover:border-transparent transition-colors duration-300 cursor-pointer"
-                            >
-                                Oakroom Restaurant
-                            </a><br>
-                            <span>Jakarta, Indonesia</span>
-                        </div>
-                        <a
-                            href="#registration-form"
-                            class="inline-block bg-white text-black font-sans font-semibold py-2 px-6 rounded-lg border-2 border-white transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 hover:bg-transparent hover:text-white"
-                        >
-                            Register Now
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </header>
+        <Header />
 
         <section>
             <div class="container">
