@@ -82,7 +82,7 @@
     }
     h3 {
         font-size: var(--h3);
-        @apply font-sans font-semibold leading-none text-black mb-4 text-pretty;
+        @apply font-sans font-semibold leading-tight text-black mb-4 text-pretty;
     }
     h4 {
         font-size: var(--h4);
